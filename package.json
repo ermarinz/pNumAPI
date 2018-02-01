@@ -1,0 +1,25 @@
+{
+  "name": "pnumapi",
+  "version": "1.0.0",
+  "description": "A Node.js / Express implementation of Google's libphonenumber",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ermarinz/pNumAPI.git"
+  },
+  "author": "Evan Marinzel",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ermarinz/pNumAPI/issues"
+  },
+  "homepage": "https://github.com/ermarinz/pNumAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "google-libphonenumber": "^3.0.10"
+  }
+}
