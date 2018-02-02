@@ -22,21 +22,19 @@ By default, this web service utilizes port 8080. Verify that the service is runn
 ![pNumAPI Running](screenshots/pNumAPI_running.png "Service successfully running")
 
 ## Usage
-The following are examples of how to extract valid phone numbers by using this tool.
+Extract valid phone numbers by using this tool!
 
-### Get phone numbers from parsing URL text
-Format:
+### Get phone numbers from URL text
 #### localhost:8080/api/phonenumbers/parse/text/My%20Phone%20Number%20String%3A%20905-491-5050
+pNumAPI will inspect a short string of text given a URL in the above format, and return a json formatted response containing a list of valid phone numbers found within the string. This method uses a regular expression to build a list of possible numbers which is limited to finding the following formats:
 
-pNumAPI will inspect a short string of text from a given URL and return a json formatted response containing a list of valid phone numbers found within the string. This method uses a regular expression to build a list of possible numbers which is limited to finding the following formats:
-
-> (123) 456-7890
-> (123)456-7890
-> 123-456-7890
-> 123.456.7890
-> 1234567890
-> +31636363634
-> 075-63546725 
+- (123) 456-7890
+- (123)456-7890
+- 123-456-7890
+- 123.456.7890
+- 1234567890
+- +31636363634
+- 075-63546725 
 
 If duplicate phone numbers are found, only one is kept. Each possible phone number is then validated using [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber). If no valid phone numbers are found, an empty list is returned. All valid results are returned in the following format:
 
