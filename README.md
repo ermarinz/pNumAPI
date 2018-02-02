@@ -32,8 +32,11 @@ pNumAPI utilizes the following modules, which are installed for you by npm.
 ### Express
 Facilitating web service functionality, we utilize the popular Node.js framework [Express](https://expressjs.com/) v4.16.2.
 
-### Body-Parser
+### body-parser
 In order to handle POST requests of content type plan/text, and body containing base64 encoded text files, we utilize the express middleware known as [body-parser](https://github.com/expressjs/body-parser)
 
 ### google-libphonenumber
-Core functionality of this software is possible by utilizing a [third-party port](https://github.com/ruimarinho/google-libphonenumber) of Google's open source [libphonenumber](https://github.com/googlei18n/libphonenumber) library. This port acts as a wrapper to the javascript version of the original software, with the intent of making it easier to work with Node.js. It allows for adding libphonenumber to npm as a single dependency, simplifying the installation process.
+Core functionality of this software is made possible by utilizing the Node.js friendly third-party port [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber) which is a useful wrapper to Google's open source [libphonenumber](https://github.com/googlei18n/libphonenumber) library.
+
+## Licenses
+This software is licensed under BSD-2-Clause. The [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber) package is licensed under MIT. The bundled [libphonenumber](https://github.com/googlei18n/libphonenumber) library is licensed under Apache 2.0.
