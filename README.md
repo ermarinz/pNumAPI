@@ -59,11 +59,10 @@ pNumAPI uses [Mocha](https://mochajs.org/) test framework with [Chai](http://cha
 npm test
 ```
 This should result in the following:
+
 ![Test output](screenshots/test_results.png "Successful test cases")
 
 ## Dependencies
-pNumAPI utilizes the following modules:
-
 ### Express
 To facilitate web service archetecture, the popular Node.js framework [Express](https://expressjs.com/) v4.16.2.
 
