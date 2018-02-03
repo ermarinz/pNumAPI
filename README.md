@@ -2,9 +2,13 @@
 A Node.js / Express implementation of Google's libphonenumber
 
 ## Introduction
-This software was written and tested using [Node.js](https://nodejs.org/en/) v8.4.0 and Node Package Manager (npm) v5.3.0.
+Thank you for finding our project!
 
-If you do not have Node.js or npm installed, aquire a copy using the link above.
+This is a web service that runs locally on your machine. It will find potential phone numbers given a variety of different input, validate them using [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber), and respond with a consistantly formatted JSON list of phone numbers.
+
+Please enjoy use of this software. We hope you may be interested in contributing to bug fixes and enhancements.
+
+This software was written and tested using [Node.js](https://nodejs.org/en/) v8.4.0 and Node Package Manager (npm) v5.3.0. If you do not have Node.js or npm installed, [aquire a copy](https://nodejs.org/en/) prior to further installation.
 
 ## Installation
 1. Clone this repository
@@ -22,11 +26,12 @@ By default, this web service utilizes port 8080. Verify that the service is runn
 ![pNumAPI Running](screenshots/pNumAPI_running.png "Service successfully running")
 
 ## Usage
-Extract valid phone numbers by using this tool!
+### Extract Phone Numbers from URL Text
+Format:
 
-### Get phone numbers from URL text
-#### localhost:8080/api/phonenumbers/parse/text/My%20Phone%20Number%20String%3A%20905-491-5050
-pNumAPI will inspect a short string of text given a URL in the above format, and return a json formatted response containing a list of valid phone numbers found within the string. This method uses a regular expression to build a list of possible phone numbers limited to the following formats:
+    localhost:8080/api/phonenumbers/parse/text/My%20Phone%20Number%20String%3A%20905-491-5050
+
+pNumAPI will inspect a short string of text within a URL, and return a json formatted response containing a list of valid phone numbers found within the string. This method first builds a list of possible phone numbers limited to the following formats:
 
     (123) 456-7890
     (123)456-7890
@@ -40,13 +45,21 @@ If duplicate phone numbers are found, only one is kept. Each possible phone numb
 
 > (905) 491-5050
 
-For example, entering this URL:
+For example, entering this URL into a web browser:
 
 > localhost:8080/api/phonenumbers/parse/text/Joe:9052325555Joes%20House:905-232-5555Jill:905%20806%205555
 
 Returns the following:
 
 ![JSON_Results](screenshots/by_url_example.png "JSON list containing two valid phone numbers")
+
+## Tests
+pNumAPI uses [Mocha](https://mochajs.org/) test framework with [Chai](http://chaijs.com/). To run the tests, first start the pNumAPI web service, then in a seperate terminal run the command:
+```sh
+npm test
+```
+This should result in the following:
+![Test output](screenshots/test_results.png "Successful test cases")
 
 ## Dependencies
 pNumAPI utilizes the following modules:
