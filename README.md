@@ -27,11 +27,11 @@ By default, this web service utilizes port 8080. Verify that the service is runn
 
 ## Usage
 ### Extract Phone Numbers from URL Text
-Format:
+URL format:
 
     localhost:8080/api/phonenumbers/parse/text/My%20Phone%20Number%20String%3A%20905-491-5050
 
-pNumAPI will inspect a short string of text within a URL, and return a json formatted response containing a list of valid phone numbers found within the string. This method first builds a list of possible phone numbers limited to the following formats:
+pNumAPI will inspect a short string of text within the URL, and return a json formatted response containing a list of valid phone numbers found within the string. This method first builds a list of possible phone numbers limited to the following formats:
 
     (123) 456-7890
     (123)456-7890
