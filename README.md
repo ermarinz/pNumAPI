@@ -53,6 +53,17 @@ Returns the following:
 
 ![JSON_Results](screenshots/by_url_example.png "JSON list containing two valid phone numbers")
 
+### Extract Phone Numbers from base64 Text
+URL format:
+
+    localhost:8080/api/phonenumbers/parse/sample_file_encoded.txt
+
+This POST route will inspect the body element of the request, treat it as base64 text, extract valid phone numbers from it, and return a JSON formatted array of phone numbers. This can be used to process longer strings than a URL allows for. 
+
+One of the provided test cases will read the contents of ./test/sample_file_encoded.txt to the body element of a [request](https://github.com/request/request) module object, and send the POST request to the server.
+
+We hope to implement other examples illustrating this feature in the future.
+
 ## Tests
 pNumAPI uses [Mocha](https://mochajs.org/) test framework with [Chai](http://chaijs.com/). To run the tests, first start the pNumAPI web service, then in a seperate terminal run the command:
 ```sh
